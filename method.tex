@@ -1,0 +1,146 @@
+Our goal in this paper is to determine, for highlighted detectors, 
+for each SN
+model, and over a range of distances, how well one can expect to measure 
+the shape and features of the \nue\ breakout light curve, as well as
+examine how well different CCSN models can be discriminated using this
+light curve. To do this, we use
+Equation~(\ref{eq:Nint}) to calculate the total expected number of
+neutrino interactions in a given detector for a given distance over a
+time range that includes 
+the breakout burst peak.  A cumulative distribution function of
+the arrival times of the detected neutrinos is also calculated.  We
+then perform a Monte Carlo sampling of observations in the given
+detector, using the cumulative distribution function of detection
+times and the calculated total expected number of neutrino
+interactions to create simulated realizations of individual
+observations.  
+The cross sections used in our analysis are detailed in
+the Appendix.
+The time range we use in the Monte Carlo sampling is
+larger than that used for our subsequent analysis, so that the total
+number of neutrinos actually used in the analysis is allowed to
+fluctuate randomly, instead of being set by our calculated total expected
+number of neutrino interactions.   A collection of $5\times10^4$ 
+sample observations are thus assembled for each detector and supernova
+distance.  The simulated data
+are binned in time (in time bins of 1-ms width) 
+and standard deviations for each time bin are
+calculated using the values across the $5\times10^4$ different
+simulated observations.
+These standard deviations are then applied to each of the individual simulated
+observations for the purposes of fitting our analytic equations to the
+simulated data.  For simplicity, we assume symmetric errors in each
+time bin of the light curve.  Since the distribution of the number 
+of detections in
+each time bin is expected to be Poissonian (an expectation that we
+verified in our simulated data), the distribution is asymmetric.  
+However, in the larger detectors
+and at smaller distances a sufficient number of neutrinos will be
+detected in each time bin for the Poissonian distribution to approach a
+symmetric Gaussian, so our assumption holds in these cases.  For
+smaller detectors and larger distances, with fewer detections expected
+in each time bin, our assumption is not valid, but we hold to it both
+for simplicity and also because the sparse data expected with smaller
+detectors and at larger distances will themselves create large errors in the
+distribution of fits to our simulated observations, larger than those
+which could be corrected by providing asymmetric errors in each time bin.
+
+As a specific example of a calculation, 
+Figure~\ref{fig:hyperkhistogram} shows the results of one of the $5\times10^4$
+realizations of a CCSN detection in Hyper-K for each of the distances 4, 7, and
+10 kpc for the 15-\Msol\ \ls\ progenitor model. 
+
+
+After the simulated observations are assembled, 
+Equation~(\ref{eq:analytic}) is
+then fit to the resultant number luminosity histograms (with error bars)
+using the \texttt{curve\_fit()} function
+of SciPy.  
+\texttt{curve\_fit()} implements
+the Levenberg-Marquardt algorithm to fit data to a function with arbitrary
+parameters.  The function we fit is derived from 
+Equation~(\ref{eq:Nint}), as follows.  First, the energy luminosity spectrum is
+converted to number luminosity spectrum, $dL^{n}_{\nu}/dE_\nu$,
+\beq
+\frac{dL^{n}_{\nu}(E_\nu,t)}{dE_\nu} = \frac{dL_\nu(E_\nu,t)}{dE_\nu}\frac{1}{E_\nu}.
+\eeq
+The number luminosity spectrum is then normalized,
+\beq
+\label{eq:numlumnorm}
+\frac{dL^{n \prime}_{\nu}}{dE_{\nu}} = \frac{dL^{n}_{\nu}/dE_{\nu}}{\int dL^{n}_{\nu}/dE_{\nu}~~dE_{\nu}}.
+\eeq
+Since
+\beq
+L^n_\nu(t) = \int \frac{dL^n_\nu(E_\nu,t)}{dE_\nu} dE_\nu,
+\eeq
+we can rearrange Equation~(\ref{eq:numlumnorm}) to get
+\beq
+\label{eq:substitution}
+\frac{dL^{n}_{\nu}(E_\nu,t)}{dE_\nu} = L^n_\nu(E_\nu,t)\frac{dL^{n \prime}_{\nu}}{dE_{\nu}}.
+\eeq
+ Equation~(\ref{eq:substitution}) can be substituted into 
+Equation~(\ref{eq:Nint}) to obtain
+\begin{equation}
+\label{eq:blackbox}
+N_{det}(t) =  \frac{N_{t}}{4\pi D^2}
+L^n_\nu(t,\boldsymbol{p})
+\int 
+\frac{dL^{n \prime}_{\nu}}{dE_{\nu}}\sigma(E_\nu)\epsilon(E_e)dE_\nu,
+\end{equation}
+where $L^n_\nu$ is given by
+Equation~(\ref{eq:analytic}), the superscript $n$
+specifies the use of number luminosity instead of energy luminosity, 
+$\boldsymbol{p}$ represents the parameter values being used in 
+Equation~(\ref{eq:analytic}) or~(\ref{eq:smallpeak}), $dN'/dE_\nu$ is the
+normalized number spectrum, and the other symbols have the same
+meanings as in Equation~(\ref{eq:Nint}). To use
+Equation~\ref{eq:blackbox}, the distance to the supernova must be
+known.  If the supernova is visible, an independent measurement of $D$
+can be made.  If the supernova is obscured, the distance will likely
+have to be estimated from the neutrino signal.  In our analysis, we
+assume knowledge of the distance. In this analysis, we have the
+advantage of knowing the energy spectrum from our models, and that is
+the spectrum which is used in Equation~\ref{eq:blackbox} for our
+analysis.  An actual detection might entail the measurement of the
+energy spectrum of the neutrinos, and will likely have an additional
+function and parameterization that will be used to fit the spectrum.
+We do not perform such a full analysis in this work, but in principle
+it would be straightforward. Figures~\ref{fig:energyspectrum}
+and \ref{fig:avgenergy} show that the energy distribution and average
+energy do not vary appreciably over the duration of the breakout
+burst, so even something as simple as assuming a constant spectrum
+through the breakout burst would be reasonable.  
+Therefore, measurements of the spectrum could be integrated over
+the time of the breakout burst to provide higher statistics in
+measuring the energy spectrum than measuring a time-dependent
+energy spectrum.  
+For a given detector (which has
+multiple detection channels), Equation~(\ref{eq:blackbox}) can be applied
+to all the interaction channels and the results summed together.
+The equation we give to
+the \texttt{curve\_fit()} function to fit the simulated data is
+Equation~(\ref{eq:blackbox}), while the parameters that are being used
+in the fitting algorithm are those of the intrinsic number
+luminosity. 
+The Levenberg-Marquardt algorithm requires an initial guess for the
+parameters, for which we provide the values from
+Table~\ref{tab:numpeakfit}.
+
+After the best fit fitting parameters are calculated, the physical
+parameters are derived from the fit.  
+We emphasize again that it is not the fitting parameters, but rather the
+physical parameters that are important to
+our analysis.  For the main breakout burst peak, the physical parameters
+calculated are:
+ maximum number luminosity of breakout burst
+($L^n_{\nu_e,\mathrm{max}}$),
+the time of maximum luminosity ($t_{\mathrm{max}}$), the width of the
+peak ($w$),
+the rise time ($t_{\mathrm{rise},1/2}$), and the fall time
+($t_{\mathrm{fall},1/2}$).  
+%For the pre-shock
+%neutronization peak, the physical parameters calculated are the
+%maximum number luminosity of the pre-shock peak
+%($L^n_{\nu_e,\mathrm{max,pre}}$) and the time of this maximum luminosity 
+%($t_{\mathrm{max,pre}}$).
+

@@ -1,0 +1,118 @@
+This Appendix lists the sources used for the neutrino
+interaction cross sections relevant to our calculations, 
+If the analytic cross section is known, then it is presented here.
+Otherwise, reference is made to the source of the tabulated values of
+the cross section.  
+Figure~\ref{fig:sigma} shows the neutrino-matter interaction
+cross sections for \nue\ and \anue.
+In what follows, it is useful to
+define the quantity $\sigma_0$ as
+\begin{equation}
+\sigma_0 = \frac{4G_F^2\cos^2{\theta_c}(m_ec^2)^2}{\pi(\hbar c)^4}
+\simeq 1.705 \times 10^{-44}~\textrm{cm}^2,
+\end{equation}
+where $G_F$ the Fermi constant, 
+ $\theta_c$ is the Cabbibo angle, and $m_e$ is the electron mass. 
+
+
+
+
+Elastic scattering off of electrons ($\nu_i + e^- \rightarrow \nu_i +
+e^-$)  is the primary $\nu_e$ detection channel for all but
+\ar40\ detectors. \cite{tomasetal2003} provide the
+differential cross section, given by
+%
+\beq   \label{el}
+ \frac{d\sigma}{dy} = 
+ \frac{\sigma_0}{8\cos^2{\theta_c}}\frac{E_\nu}{m_ec^2} \left[ A+B\,(1-y)^2-C\,\frac{m_e}{E_\nu}\,y
+ \right] ~,
+\eeq         
+%
+where $y=E_e/E_\nu$ is the energy fraction transferred to the electron.  The
+coefficients $A$, $B$ and $C$ differ for the four different reaction
+channels and are given in Table~\ref{ABC} (based on a similar table in
+\citealt{tomasetal2003}). The vector and axial-vector
+coupling constants have the usual values $C_V
+=-\frac{1}{2}+2\sin^2\Theta_W$ and $C_A=-\frac{1}{2}$, with
+$\sin^2\Theta_W \approx 0.231$ (\citealt{oliveetal2014}) being the Weinberg angle.
+
+In an electron scattering, the relationship between the energy fraction transferred to the
+electron ($y$) and the scattering angle
+$\theta$ is given by (\citealt{tomasetal2003})
+%
+\beq
+ y = \frac{2\,(m_ec^2/E_\nu)\,\cos^2\theta}{(1+m_ec^2/E_\nu)^2-\cos^2\theta}
+ ~. 
+\eeq
+%
+The total cross sections for electron scattering are given by
+\cite{marcianoparsa2003}.
+ Ignoring corrections of order $m_ec^2/E_\nu$,  the following are the 
+  total cross sections:
+\begin{align}
+\sigma (\nu_e + e^- \rightarrow \nu_e + e^-) &= \frac{\sigma_0}{8\cos^2{\theta_c}}\left(\frac{E_\nu}{m_ec^2}\right) [1+4\sin^2\theta_W + \frac{16}{3} \sin^4\theta_W],
+\end{align}
+\begin{align}
+\sigma (\bar\nu_e + e^- \rightarrow \bar\nu_e + e^-)  &= \frac{\sigma_0}{8\cos^2{\theta_c}}\left(\frac{E_\nu}{m_ec^2}\right)[\frac13+\frac43\sin^2\theta_W + \frac{16}{3} \sin^4\theta_W].
+\end{align}
+The \nux\ total cross sections are given by (neglecting terms of
+ order $m_ec^2/E_\nu$)
+\begin{align}
+\sigma (\nu_{\mu,\tau} + e^- \rightarrow \nu_{\mu,\tau} + e^-)  &= \frac{\sigma_0}{8\cos^2{\theta_c}}\left(\frac{E_\nu}{m_ec^2}\right) [1-4\sin^2\theta_W + \frac{16}{3} \sin^4\theta_W],
+\end{align}
+\begin{align}
+\sigma (\bar\nu_{\mu,\tau} + e^- \rightarrow \bar\nu_{\mu,\tau} + e^-) &= \frac{\sigma_0}{8\cos^2{\theta_c}}\left(\frac{E_\nu}{m_ec^2}\right)[\frac13-\frac43\sin^2\theta_W + \frac{16}{3} \sin^4\theta_W].
+\end{align}
+For inverse beta decay (IBD, $\bar\nu_e + p \rightarrow n + e^-$)
+we use the analytic cross section of \cite{burrowsetal2006}, given by
+\begin{equation}
+\label{eq:anuep}
+\sigma({\bar\nu_e p \rightarrow N + e^-}) =
+\sigma_0\frac{1+3g_A^2}{4}\left(\frac{E_{\bar\nu_e}-\Delta_{np}}{m_ec^2}\right)^2
+\left[1-\left(\frac{m_ec^2}{E_{\bar\nu_e} - \Delta_{np}}\right)^2\right]^{1/2} W_{\overline{M}},
+\end{equation}
+where $g_A$ is the axial-vector coupling constant, $\Delta_{np}$ is the mass-energy difference between a
+proton and a neutron $(m_n - m_p)c^2$, and
+$W_{\overline{M}}$ 
+is the correction for weak magnetism and
+recoil, $(1-7.1 E_{\bar\nu_e}/m_nc^2)$.
+For both \nue\ and \anue\ CC absorption on \ar40, 
+we use the cross sections from \cite{kolbeetal2003}, their Figure 9.
+The data for the oxygen cross sections (which include CC
+absorption by \nue\ and \anue\ and NC scattering by all species) are taken from tables in
+\cite{kolbeetal2002}.  In our
+analysis, we assume that all oxygen is $^{16}$O.
+The cross sections for CC absorption of \nue\ and \anue\ on carbon are taken from tables in
+\cite{kolbeetal1999}.  The cross sections for NC
+scattering of all neutrino flavors on carbon are taken from tables in  \cite{fukugitaetal1988}.
+In our analysis, we assume that all carbon is $^{12}$C.  
+Neutrino
+elastic scattering off of protons ($\nu_i + p \rightarrow \nu_i + p$)
+is also expected to be detectable in scintillation detectors due to
+their low detection thresholds (\citealt{beacom2002}).  
+However, the flux primarily probed by
+this channel will be the \nux\ flux (referring to the what is
+the \nux\ flux before oscillations occur) because of its higher average
+energy.  \cite{oberaueretal2005} state that the 
+signal from the recoil protons can be easily separated from the other
+signals.  We assume this ability in our analysis and do not include
+contributions from NC scattering on protons.
+\begin{deluxetable}{lccc}
+\tablecolumns{4}
+\tablecaption{\label{ABC} 
+Coefficients used in Eq.~(\ref{el}) for the elastic scattering of
+neutrinos on electrons.}
+\tablehead{ Neutrino Type & \colhead{$A$} & \colhead{$B$} & \colhead{$C$} }
+%   & $A$ & $B$ & $C$ \\[0.5ex] \hline  
+\startdata
+$\nu_e$ & $(C_V{+}C_A{+}2)^2$ & $(C_V-C_A)^2$ & $(C_V+1)^2-(C_A+1)^2$ \\
+$\bar\nu_e$ & $(C_V-C_A)^2$ & $(C_V{+}C_A{+}2)^2$ & $(C_V+1)^2-(C_A+1)^2$\\
+$\nu_{\mu,\tau}$ & $(C_V+C_A)^2$ & $(C_V-C_A)^2$ & $C_V^2-C_A^2$\\
+$\bar\nu_{\mu,\tau}$ & $(C_V-C_A)^2$ & $(C_V+C_A)^2$ &
+$C_V^2-C_A^2$ 
+\enddata
+\end{deluxetable}
+
+
+
+

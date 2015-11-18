@@ -1,0 +1,666 @@
+ There are four main classes
+of detectors relevant for detecting the \nue\ 
+breakout burst: \ar40\ detectors, water-\cer\
+detectors, long-string detectors, and 
+scintillation detectors.    
+Each of these detector classes has its
+own strengths and weaknesses with regard to the detection of
+the breakout burst.
+
+Table~\ref{tab:detectors} lists the detectors we highlight in our
+study, as well as some other detectors of interest for detection of
+the breakout burst.  
+It consists both of detectors currently running and detectors
+that are expected to come online in the coming years.  The list is not
+exhaustive, but is rather a representative ``short-list'' of detectors we
+think will provide the best opportunity to examine the breakout
+burst.  We now discuss specifics of each class of detector.
+
+\begin{deluxetable*}{lccc}
+%\begin{deluxetable}{cccc}
+\tablecolumns{4}
+\tablecaption{Selected Neutrino Detectors\label{tab:detectors}}
+
+\tablehead{\colhead{Detector} & \colhead{Detection Medium} & \colhead{Mass} & \colhead{Status} \\ 
+\colhead{} & \colhead{} & \colhead{(ktonne)} & \colhead{} } 
+
+\startdata
+DUNE &  \ar40 & 40 & planning\tablenotemark{a}\\
+Hyper-K & water & 560 (fiducial) & proposed\tablenotemark{b}\\
+Super-K & water & 22.5 (fiducial)\tablenotemark{c} & running \\
+IceCube & water ice & $\sim$900\tablenotemark{d} & running\\
+JUNO  & scintillator & 20\tablenotemark{e} & construction\\
+\hline\\ [-1.25ex]
+
+ICARUS & \ar40 & .476 (active)\tablenotemark{f} & being refurbished\\
+KamLAND & scintillator & 1\tablenotemark{g}  & running  \\ 
+LVD & scintillator & $\sim$1\tablenotemark{h} & running \\
+NO$\nu$A\tablenotemark{i} & scintillator & 14\tablenotemark{j} &
+running
+\enddata
+
+\tablenotetext{a}{Mass and status from \cite{deoliviera2015};}
+\tablenotetext{b}{Mass and status from \cite{abeetal2011};}
+\tablenotetext{c}{Mass from \cite{ikedaetal2007};}
+\tablenotetext{d}{Based on the energy-dependent effective detection volume given in \cite{abbasietal2011};}
+\tablenotetext{e}{Mass from \cite{li2014};}
+\tablenotetext{f}{Mass from \cite{rubbiaetal2011};}
+\tablenotetext{g}{Mass from \cite{eguchietal2003};}
+\tablenotetext{h}{Mass from http://www.bo.infn.it/lvd/;}
+\tablenotetext{i}{NO$\nu$A is located at the surface;}
+\tablenotetext{j}{Mass from \cite{pattersonetal2012}.}
+\end{deluxetable*}
+%\end{deluxetable}
+
+
+\subsection{\ar40\ Detectors}
+Of all the detector types we consider, 
+\ar40\ detectors have the highest sensitivity to \nue's (the primary
+neutrino emission of the breakout burst, ignoring oscillations). The 
+\nue's interact
+with \ar40\ nuclei via charged-current (CC) 
+capture; it is the large cross section of
+this interaction  that gives \ar40\ 
+detectors such great \nue\ sensitivity.  The electron created in this
+process deposits its kinetic energy 
+along an ionization trail through the detection medium.  The \ar40\
+detectors we mention  in this paper are all time-projection chambers
+(TPCs).  In a TPC, a voltage is applied
+across the detection medium, causing the particles ionized by the
+product electrons to drift
+toward a wire mesh that (when combined with the timing of the
+formation of the ionization trail) gives spatial information about the
+interaction inside the detector.  The \anue's also undergo CC
+absorption with the \ar40\ nuclei.  The cross section for this
+interaction, for the neutrino energies in a supernova, is 2-3
+orders of magnitude smaller than for \nue\ CC absorption
+in the energy range relevant for this study,
+and so this interaction serves as a small background to the \nue\
+signal in the case of no oscillations.  Neutrinos of all flavors can also be
+detected  via elastic scattering off the electrons.
+Electrons produced from electron scattering are 
+indistinguishable from the electrons produced by CC
+absorption of \nue's on the \ar40\ nuclei, but electron scattering has a
+much smaller cross section (factor of ${\sim}100$ for 10 MeV neutrinos) 
+than the CC interaction channel on \ar40.
+ Because of the dominance of
+the cross sections through which \nue's are detected and the dominance
+of the \nue\ flux relative to the \anue\ and \nux\ flux through the breakout
+burst, we assume the ability of these detectors to separate or ignore
+the background \anue\ and \nux\ signals 
+and consider only the \nue\ luminosity in our analysis for the case of
+no neutrino oscillations.  The mixing of the \nuxpart\ and \nue\ flux
+in the case of neutrino oscillations complicates this and we cannot
+assume, for either the NH or IH, that the \nuxpart\ backgrounds are negligible. 
+Also, \ar40\ detectors can measure
+the energies of the electrons produced in the neutrino interactions
+inside them.  
+In principle, gamma-rays from nuclear de-excitation
+could be detected, allowing the tagging of \nue\ CC
+absorption events and their separation from electron scattering
+events, as well as detection of neutral-current (NC) scatterings off of
+nuclei.  The detectability of these gamma-rays is still under study
+(A. Rubbia 2015, private communication),
+and we do not assume the ability to detect them.
+
+The largest \ar40\ detector operated so far is ICARUS (Imaging 
+Cosmic And Rare Underground Signals), formerly located in the Gran Sasso 
+underground laboratory in Italy.  The detector had an active mass of
+476 tonnes (\citealt{rubbiaetal2011}).  The detector is currently in
+the process of being refurbished for later installation in the USA 
+at Fermilab.  
+In our analysis, we assume a detection efficiency
+of 100\% across all product energies for the \ar40\ detectors. 
+We note that the interaction cross sections set their own
+threshold for neutrino detection, which is incorporated with our
+cross-section 
+calculations.  We refer interested readers to the Appendix for
+a further discussion of these cross sections.  
+We calculate that a detector of ICARUS's size 
+will detect $\sim$1 \nue\ in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations (even less in either NH or IH case oscillations). 
+Because of the expected small
+signal from ICARUS, we do not use it in our analysis.
+
+There are plans for a 40-ktonne (fiducial) \ar40\ detector to be
+constructed at the Sanford Lab in the
+Homestake Mine in South Dakota as a part of
+part of the Deep Underground Neutrino Experiment    
+ (DUNE; formerly the 
+Long Baseline Neutrino Experiment, LBNE; 
+\citealt{deoliviera2015}).  We calculate that an \ar40\ detector of
+this size will detect $\sim$120 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations.  For the same situation as just outlined, the number of
+detected (original) \nue's in the NH case will be \abt 2 and in the IH
+case will be \abt 40.  The current plans for DUNE
+may leave it with photon timing only as precise as \abt 1-3 ms.  We
+assume an upgraded DUNE that will be able to measure photon timing to
+much better than the time bin width used in our analysis (1 ms).
+
+
+
+\subsection{Water-\cer\ detectors}
+Water-\cer\ detectors are large tanks of purified water
+primarily sensitive to \anue's through inverse $\beta$ decay (IBD) on
+protons (hydrogen nuclei): $\bar\nu_e + p \rightarrow e^+ + n$. 
+The positron produced by IBD emits \cer\ light, which is detected by
+photomultiplier tubes placed around the detection
+volume. Neutrinos of all flavors can be detected through elastic
+scattering on electrons, $\nu_i + e^- \rightarrow \nu_i + e^-$.  
+The final state electrons are detected through their
+\cer\ emission.  \nue\ and \anue\ can also undergo CC absorption 
+on the oxygen
+nuclei  and are detected through the electrons/positrons formed in
+these interactions, as well as through photons emitted via nuclear
+deexcitation.  
+Additionally, neutrinos of all types may undergo NC
+interactions with the oxygen nuclei, which (if the interaction puts
+the nucleus in an excited state) can be detected by the photon emitted
+upon deexcitation of the nucleus.
+
+In standard water-\cer\ detectors, positrons from
+IBD's and electrons from 
+electron scatterings can be statistically distinguished by the
+forward-peaked directionality of the electron scattering products and the
+nearly-isotropic products of IBD.
+ The IBD
+detection channel has the largest cross section and so 
+dominates when there is a \anue\ flux.  Figure~\ref{fig:lumallt} shows
+that the \anue\ flux is not significant until after the
+\nue\ peak of the breakout burst.
+Thus, previous to this almost all detections can be attributed
+to \nue's (in the no-oscillation case).
+After this the \anue's (and, less so, the \nux's) 
+must be accounted
+for.  Future water-\cer\ detectors may
+employ gadolinium (Gd) to tag the final-state neutrons and allow the IBD and
+electron elastic scattering signals to be separated
+(\citealt{vagins2012}; \citealt{lahabeacom2014}).  The large neutron
+capture cross section of Gd allows neutrons formed in IBD events to be
+quickly ($\sim$20 $\mu$s) captured, emitting 3-4 gamma-rays with a total
+energy of 8 MeV (\citealt{beacomvagins2004}).  
+The coincidence of a neutrino
+detection and a gamma ray from neutron capture on Gd 
+allows the neutrino detection to be associated with an IBD.  We
+assume the presence of Gd in our analysis.  In practice, using Gd to
+tag IBD events will not be perfect, although the fraction of neutrons
+that are captured onto Gd is very high even for modest additions of Gd
+to water (\citealt{beacomvagins2004}).  The signal remaining from
+untagged IBD's can be statistically subtracted from the remaining signal.
+Because of this, and because of the ability to statistically distinguish
+\nue's and \anue's based on direction, in our analysis we assume that
+IBD's can be separated from the rest of the signal.  In the case of no
+oscillations, this leaves the \nue\ flux dominant.
+\cite{lahabeacom2014} also state that \nux\ 
+information from scintillation detectors 
+will allow those events to be statistically subtracted,
+leaving only the \nue\ events.  Based on this, we assume the
+ability to subtract or ignore all \backgrounds\footnote{In this work,
+the \backgrounds\ to which we refer are due to \anue\ and \nux\
+emission from the CCSN itself, not the detector backgrounds or any
+ambient neutrino background (for instance, solar neutrinos or the
+diffuse supernova neutrino background).} in the no-oscillation
+case.  In the case of neutrino oscillations, the detectability of the 
+background \nux\ flux
+will increase and cannot be so easily ignored.
+
+Super-Kamiokande (Super-K) is a 22.5-ktonne (fiducial) water-\cer\ 
+detector located
+in the Kamioka Mine in Japan (\citealp{fukudaetal2003,ikedaetal2007}).
+Super-K
+ IV, for solar
+ neutrino analysis, reports a 99\% triggering efficiency for 4.0-4.5 
+MeV and a 100\% triggering efficiency above 4.5 MeV
+(\citealt{sekiya2013}).  The exact threshold and detection volume that
+can be used for neutrino detection in a CCSN depend on the background
+rate and the signal rate, the latter of which depends on distance to
+the supernova.  Thus, there is some ambiguity regarding which detector
+threshold would be most appropriate to use.
+In our analysis, we assume a Heaviside step function with 
+step at 4.0 MeV as our detection efficiency function for Super-K, for
+all supernova distances.  Since electron scattering
+has a spread of electron energies that can be produced for a given
+neutrino energy, neutrinos with energies well above the detector
+threshold may result in product electrons that fall below the
+threshold.  For 10 MeV \nue's (comparable to the average neutrino
+energy through the breakout burst), we find that \abt 40\% of electron
+scatterings produce electrons with energies below our chosen 4 MeV
+threshold.
+This represents a significant reduction in the detected \nue\ flux
+relative to what otherwise could be measured that could possibly be measured. 
+Any improvements that can be made to the detector threshold for
+a CCSN has significant potential to 
+improve the results presented throughout this work.
+  We calculate 
+that Super-K  will detect $\sim$7 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations.  For the same situation as just outlined, the number of
+detected (original) \nue's in the NH case will be \abt 0 and in the IH
+case will be \abt 1.
+
+Super-K has recently been approved to have Gd added, following
+years of study as to the  feasibility and impact of adding Gd to 
+Super-K (\citealp{beacomvagins2004,watanabe2009,vagins2012,mori2013}).  
+\cite{beacomvagins2004} suggest that with 0.2\% (by mass) 
+Gd added to Super-K,
+${\sim}90\%$ of the IBD events could be tagged. The remaining
+IBD events (as well as the \anue\ absorption events on $^{16}$O) 
+can then be statistically subtracted from the remaining
+signal.  
+
+Hyper-Kamiokande (Hyper-K) is a proposed 560-ktonne (fiducial) water-\cer\
+detector planned to be located at the Kamioka Mine in Japan
+(\citealt{abeetal2011}). The detector threshold for Hyper-K depends on
+the photomultiplier tube coverage fraction, which is not yet
+finalized.  If this coverage fraction is smaller than that of Super-K,
+then the detector threshold for Hyper-K will be greater than for
+Super-K.  Because the final detector design is not yet finalized and
+for simplicity, for Hyper-K, we assume the same 4 MeV 
+detector threshold
+we assume for Super-K.  We calculate 
+that a water-\cer\ detector of Hyper-K's size  will detect 
+$\sim$160 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations.  For the same situation as just outlined, the number of
+detected (original) \nue's in the NH case will be \abt 30 and in the IH
+case will be \abt 70.
+
+Both Super-K and Hyper-K could provide an estimate of the direction of the neutrino 
+flux.  The scattering of \nue's  off of electrons results in electron 
+propagation that is forward peaked relative 
+to the incident neutrino's motion.  The direction of
+the final-state electrons can be measured using information from the
+electrons' \cer\ light cones.  Because the electrons produced in these
+scatterings are not perfectly forward-peaked, and because of the
+subsequent straggling of the electrons as they scatter within the
+detector, the precision of such a direction measurement is
+limited.  \cite{andosato2002} calculate that Super-K can measure the
+location of a CCSN at 10 kpc to within a circle of
+$\sim$9\degree\ radius, using \nue's measured over the whole neutrino
+event (and not just the breakout burst).  \cite{tomasetal2003}
+calculate that Super-K, with Gd added, could measure a supernova
+position to an accuracy of 3.2\degree-3.6\degree,
+depending on the neutron tagging efficiency.  They also calculate that
+a megatonne water detector with Gd and 90\% tagging efficiency would measure
+the direction to an accuracy of 0.6\degree, and  \cite{abeetal2011} state
+that Hyper-K would be able to measure direction for a CCSN at 10 kpc
+to an accuracy of $\sim$2\degree.
+
+\subsection{Long-String Detectors}
+
+IceCube is a long-string detector embedded in the Antarctic ice at the
+South Pole (\citealp{achterbergetal2006,abbasi2010}). It
+is optimized for the detection of neutrinos with TeV energies, much
+higher than the $\mathcal{O}(10)$~MeV energies expected for the
+breakout-burst neutrinos. 
+However, the
+neutrinos from a CCSN will create a correlated rise in the measured
+detector background across all the individual detection components of IceCube
+(\citealp{pryoretal1988,halzenetal1996}).  
+%Estimates for the 
+%volume probed for CCSN neutrino
+%detection by the entire
+%ensemble of detectors in IceCube vary from $\sim$2.6 Mtonne
+%in \cite{halzenrodrigues2010} (scaling their estimate of
+%$\sim$2.4 Mtonne to that of the completed IceCube) to $\sim$3.5 Mtonne
+%in \cite{abbasietal2011}.  We use a detection mass of 3.5 Mtonne  
+%in our analysis.
+Each individual detection component effectively monitors 
+an energy-dependent volume of ice surrounding it, with the 
+size of the effective volume depending linearly on the 
+energy of the interaction products (\citealt{abbasietal2011}).  
+Using a cross section-weighted average $\nu_e$ energy of 13 MeV 
+for the 15-\Msol case with the LSEOS and the spread of interaction 
+product energies, IceCube corresponds to a $\sim$ 900 ktonne 
+CCSN neutrino detector.
+Although real-time supernova monitoring in IceCube bins data 
+in 2-ms time bins, data on the individual photon detections 
+are saved in a 90-second window around a putative supernova 
+event (\citealt{aartsenetal2013}), allowing for arbitrary binning.
+IceCube
+currently lacks the ability to measure the energy of the neutrinos it
+would detect from a CCSN, so it would be able to measure a light curve, but
+not a spectrum for the breakout burst.  For our analysis we assume no
+detector threshold for IceCube.  We calculate 
+IceCube  will detect 
+$\sim$1600 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations.  For the same situation as just outlined, the number of
+detected (original) \nue's in the NH case will be \abt 300 and in the IH
+case will be \abt 700.  We also note that because
+IceCube does not reproduce neutrinos from CCSN on an event-by-event
+basis, it cannot provide any pointing information by itself, as can
+Super-K.  However, its large breakout yield may be useful
+in a triangulation calculation using multiple detectors.
+
+%IceCube also lacks the ability to discriminate between neutrino
+%species.  However, \nue's dominate through the breakout burst peak,
+%and in the no-oscillation case the peak in \nue\ luminosity is still
+%visible against the \backgrounds.  Because of this, because of the
+%potential of using information from other detectors to subtract 
+%the \backgrounds\ (especially the \anue\ IBD background), and for
+%consistency with the other detectors discussed here, we assume the
+%ability to subtract the \backgrounds\ in the no-oscillation case.  As
+%with the other detectors, neutrino oscillations complicate things
+%and the \backgrounds\ cannot be so easily subtracted in the IH and NH
+%cases.
+IceCube also lacks the ability to discriminate between neutrino species.  The breakout burst light curve is dominaed by \nue's, but the energy-dependent detection of volume favors detection of the higher-energy \backgrounds, and so the fall from \nue peak is not clearly seen.  Because of the potential of using information from other detectors to subtract the \background\ (especially the \anue\ IBD background), for consistency with the other detectors, and because the no-oscillation case represents a best-case breakout detection scenario that is not likely to obtain, we assume the ability to subtract the \backgrounds\ in the no-oscillation case as a calculation of the best performance possible of IceCube in detecting the breakout burst peak.  As with the other detectors, neutrino oscillations complicate things and the \backgrounds\ cannot be to easily subtracted in the IH and NH cases.
+
+
+\subsection{Scintillation Detectors}
+Scintillation detectors are tanks of hydrocarbon 
+scintillators.  They are very similar to water-\cer\
+detectors in that 
+they employ a proton-rich medium for neutrino detection 
+and, as such, are most sensitive  to
+\anue's. The final-state electrons and positrons that result from
+electron scattering and IBD are detected via their scintillation light
+using photomultiplier tubes. 
+ Scintillation detectors have a much lower energy detection threshold  
+(${\sim}0.2$ MeV, \citealt{lahaetal2014}) than
+ water-\cer\ detectors.  In our analysis, 
+for the detector efficiency we assume a Heaviside step function 
+with step at 0.2 MeV. In addition to detecting
+neutrinos through IBD and electron scattering reactions, \nue\
+and \anue\ absorption on the carbon nuclei produce detectable
+products and the scattering
+of all neutrino types on the carbon nuclei can 
+in principle  be detected via photon
+emission from deexcitation, much as for oxygen in water-\cer\
+detectors.  Scintillation detectors can also make a measurement of the
+neutrino spectrum by measuring the energies of the final-state
+products of the neutrino interactions.
+
+Scintillation detectors have the advantage that electron
+scattering 
+and IBD events are distinguishable: 99\% of the neutrons formed in IBD
+events will quickly (${\sim}0.2$ ms) 
+combine with a proton, producing a
+2.2-MeV gamma-ray (\citealt{abeetal2008}), which can be detected.  
+A coincidence in time and space of an electron/positron signal with a
+neutron capture gamma-ray allows the identification of that signal as
+a positron.
+ In addition, experiments have shown that
+scintillation detectors are able to differentiate electrons
+and positrons through pulse shape discrimination 
+(\citealp{kinoetal2000,francoetal2011}), which
+allows for further differentiation between electron scattering
+and \anue\ absorption events.  Pulse shape discrimination 
+has been demonstrated in active scintillation detectors
+(\citealp{abeetal2014,bellinietal2014}) and we anticipate its
+continued use in future scintillation detectors.  Because of these
+things, in our analysis we assume the ability to tag all IBD's.  For
+the no-oscillation case, this corresponds to the \anue\ flux.
+Scintillation detectors can detect
+\nux\ through $\nu_x + p \rightarrow \nu_x + p$
+(\citealp{oberaueretal2005,lahabeacom2014}) and  \nux\ can also, in
+principle, be measured via $\nu_x + {^{12}}\textrm{C} \rightarrow  
+\nu_x + {^{12}}\textrm{C*}$ (\citealt{ryazhskaya1992}), so we assume in
+our analysis that \nux\ can be differentiated from other types.  Thus,
+we only care about the \nue\ flux in our analysis for the
+no-oscillation case.  Again, complications due to neutrino
+oscillations do not permit so straightforward a subtraction of the
+\backgrounds\ in the case of oscillations.
+
+
+Although the exact ratio of carbon to hydrogen varies in 
+the scintillators employed in detectors, 
+it does not depart too much from a
+C$_{n}$H$_{2n}$ stochiometry, which is the chemical form 
+assumed in our analysis.
+
+There are currently two scintillation detectors with detection mass
+$\sim$1 ktonne: the Kamioka Liquid Scintillator Antineutrino Detector
+(KamLAND) in the Kamioka mine in Japan
+(\citealt{eguchietal2003}) and the Large Volume Detector (LVD) in 
+the Gran Sasso underground laboratory in 
+Italy (\citealt{agliettaetal1992}). There are also several smaller detectors.
+We calculate 
+that a scintillation detector with fiducial mass 1 ktonne will detect 
+$\sim$0-1 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations (even less in the case of neutrino oscillations). 
+Because of this small signal,
+we do not consider scintillation detectors of this size (and smaller) further.
+There is a 14-ktonne
+scintillation detector in operation, the NO$\nu$A far
+detector in Ash River, Minnesota
+(\citealt{pattersonetal2012}), which is located at the surface.  
+Because of the
+high backgrounds in this detector, we do not consider it.
+
+The Jiangmen Underground Neutrino Observatory (JUNO), currently under
+construction\footnote{http://english.ihep.cas.cn/rs/fs/juno0815/PPjuno/201501/
+t20150112\_135044.html}, is a 20-ktonne
+scintillation detector located in Jiangmen, China (\citealt{li2014}).  We calculate 
+that a scintillation detector of JUNO's size will detect 
+$\sim$10 \nue's in a 10-ms period over the
+breakout burst at a distance of 10 kpc in the case of no neutrino
+oscillations.  For the same situation as just outlined, the number of
+detected (original) \nue's in the NH case will be \abt 2 and in the IH
+case will be \abt 5.  We take the JUNO mass of 20
+ktonne as the representative mass for scintillation detectors in our
+analysis. 
+
+In summary, \ar40\ detectors have the highest sensitivity to \nue's. 
+Scintillation detectors  have the best intrinsic 
+particle identification abilities.
+Functional and material
+considerations make water-\cer\ detectors (including long-string
+detectors) less expensive to build with a large detection volume.
+\ar40, scintillation, and water-\cer\ detectors are 
+all able to measure the energies expected for the
+final-state products in a CCSN, while long-string detectors 
+are currently unable to measure the energies in that range.  
+Table~\ref{tab:numdetections} summarizes, in the case of no neutrino
+oscillations, 
+our calculations of how many \nue's each of our representative
+detectors would be able to detect in a 10-ms period during the
+breakout burst at a selection of
+distances. Table~\ref{tab:numdetections_NH} shows the same for the NH
+case, and  Table~\ref{tab:numdetections_IH} shows the same for the IH case.
+Table~\ref{tab:numdetectionsprebreakout}  shows
+the same as Table~\ref{tab:numdetections}, in the case
+of no neutrino oscillations, for the
+pre-shock neutronization peak.  
+Table~\ref{tab:numdetectionsprebreakout_NH} shows the same for the NH
+case, and  Table~\ref{tab:numdetectionsprebreakout_IH} shows the 
+same for the IH case.
+The numbers for the pre-shock
+neutronization peak are significantly smaller than those of the
+breakout burst, because of the lower \nue\ number flux and lower average
+\nue\ energy in the pre-shock neutronization peak relative to the
+breakout burst peak (Figure~\ref{fig:avgenergy}).  These tables do not
+take any \backgrounds\ into account.  In general, the no-oscillation
+case causes the largest number of \nue\ detections, while the NH
+case causes the smallest number of \nue\ detections, for all
+detectors. For the water-\cer, scintillation, and long-string
+detectors, this is owing to the smaller electron-scattering cross
+section for \nux's as opposed to \nue's (a factor of \abt 6 smaller
+for \nuxpart\ and \abt 7 smaller for \nuxanti).
+For \ar40\ detectors, this is due to the dominance of the \nue\ CC
+absorption channel in the measured signal.
+%
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms
+Interval During Breakout in the No-Oscillation Case\label{tab:numdetections}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1 & 12000 & 1000 & 25000 & 160000 & 1100\\
+%4 & 740 & 62 & 1600 & 9800 & 68\\
+%7 & 240 & 20 & 510 & 3200 & 22\\
+%10 & 120 & 10 & 250 & 1600 & 11\\
+%20 & 30 & 3 & 62 & 390 & 3
+%1 & 12000 & 660 & 16000 & 160000 & 1100\\
+%4 & 740 & 41 & 1000 & 10000 & 68\\
+%7 & 240 & 13 & 330 & 3300 & 22\\
+%10 & 120 & 7 & 160 & 1600 & 11\\
+%20 & 30 & 2 & 41 & 400 & 3
+1 & 12000 & 660 & 16000 & 48000 & 1100\\
+4 & 740 & 41 & 1000 & 3000 & 68\\
+7 & 240 & 13 & 330 & 990 & 22\\
+10 & 120 & 7 & 160 & 480 & 11\\
+20 & 30 & 2 & 41 & 120 & 3
+\enddata
+\end{deluxetable}
+
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms Interval During Breakout in the NH case\label{tab:numdetections_NH}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1 & 230 & 180 & 4500 & 28000 & 220\\
+%4 & 14 & 11 & 280 & 1700 & 14\\
+%7 & 5 & 4 & 91 & 570 & 5\\
+%10 & 2 & 2 & 45 & 280 & 2\\
+%20 & 1 & 0 & 11 & 70 & 1
+%1 & 230 & 110 & 2800 & 28000 & 220\\
+%4 & 14 & 7 & 170 & 1700 & 14\\
+%7 & 5 & 2 & 56 & 570 & 5\\
+%10 & 2 & 1 & 28 & 280 & 2\\
+%20 & 1 & 0 & 7 & 70 & 1
+1 & 230 & 110 & 2800 & 11000 & 220\\
+4 & 14 & 7 & 170 & 660 & 14\\
+7 & 5 & 2 & 56 & 220 & 5\\
+10 & 2 & 1 & 28 & 110 & 2\\
+20 & 1 & 0 & 7 & 26 & 1
+\enddata
+\end{deluxetable}
+
+
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms
+Interval During Breakout in the IH case\label{tab:numdetections_IH}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1 & 3800 & 440 & 11000 & 69000 & 500\\
+%4 & 240 & 27 & 680 & 4300 & 31\\
+%7 & 78 & 9 & 220 & 1400 & 10\\
+%10 & 38 & 4 & 110 & 690 & 5\\
+%20 & 10 & 1 & 27 & 170 & 1
+%1 & 3800 & 280 & 6900 & 69000 & 490\\
+%4 & 240 & 17 & 430 & 4300 & 31\\
+%7 & 78 & 6 & 140 & 1400 & 10\\
+%10 & 38 & 3 & 69 & 690 & 5\\
+%20 & 10 & 1 & 17 & 170 & 1
+1 & 3800 & 280 & 6900 & 22000 & 490\\
+4 & 240 & 17 & 430 & 1400 & 31\\
+7 & 78 & 6 & 140 & 460 & 10\\
+10 & 38 & 3 & 69 & 220 & 5\\
+20 & 10 & 1 & 17 & 56 & 1
+\enddata
+\end{deluxetable}
+
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms Interval During Pre-Shock Neutronization Peak in the No-Oscillation Case\label{tab:numdetectionsprebreakout}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1  & 880 & 180 & 4500 & 29000 & 170\\
+%4  & 55 & 11 & 280 & 1800 & 11\\
+%7  & 18 & 4 & 91 & 590 & 4\\
+%10  & 9 & 2 & 45 & 290 & 2\\
+%20  & 2 & 0 & 11 & 72 & 0
+%1 & 890 & 80 & 2000 & 30000 & 170\\
+%4 & 56 & 5 & 120 & 1900 & 11\\
+%7 & 18 & 2 & 41 & 600 & 3\\
+%10 & 9 & 1 & 20 & 300 & 2\\
+%20 & 2 & 0 & 5 & 74 & 0
+1 & 890 & 80 & 2000 & 4600 & 170\\
+4 & 56 & 5 & 120 & 290 & 11\\
+7 & 18 & 2 & 41 & 93 & 3\\
+10 & 9 & 1 & 20 & 46 & 2\\
+20 & 2 & 0 & 5 & 11 & 0
+\enddata
+\end{deluxetable}
+
+
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms
+Interval During Pre-Breakout Neutronization Peak in the NH
+case\label{tab:numdetectionsprebreakout_NH}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1 & 45 & 30 & 750 & 4800 & 29\\
+%4 & 3 & 2 & 47 & 300 & 2\\
+%7 & 1 & 1 & 15 & 99 & 1\\
+%10 & 0 & 0 & 8 & 48 & 0\\
+%20 & 0 & 0 & 2 & 12 & 0
+%1 & 45 & 12 & 290 & 4800 & 28\\
+%4 & 3 & 1 & 18 & 300 & 2\\
+%7 & 1 & 0 & 6 & 99 & 1\\
+%10 & 0 & 0 & 3 & 48 & 0\\
+%20 & 0 & 0 & 1 & 12 & 0
+1 & 45 & 12 & 290 & 700 & 28\\
+4 & 3 & 1 & 18 & 44 & 2\\
+7 & 1 & 0 & 6 & 14 & 1\\
+10 & 0 & 0 & 3 & 7 & 0\\
+20 & 0 & 0 & 1 & 2 & 0
+\enddata
+\end{deluxetable}
+
+
+
+\begin{deluxetable}{cccccc}
+\tablewidth{0pc}
+\tablecolumns{6}
+\tablecaption{Approximate Number of $\nu_e$'s Detected in 10-ms
+Interval During Pre-Breakout Neutronization Peak in the IH
+case\label{tab:numdetectionsprebreakout_IH}}
+\tablehead{
+\colhead{Distance} & \colhead{DUNE} & \colhead{Super-K}
+& \colhead{Hyper-K} & \colhead{IceCube}
+& \colhead{JUNO} \\ \colhead{(kpc)} & \colhead{} & 
+\colhead{} & \colhead{} & \colhead{} & \colhead{} }
+\startdata
+%1 & 310 & 78 & 1900 & 12000 & 74\\
+%4 & 19 & 5 & 120 & 780 & 5\\
+%7 & 6 & 2 & 40 & 250 & 2\\
+%10 & 3 & 1 & 19 & 120 & 1\\
+%20 & 1 & 0 & 5 & 31 & 0
+%1 & 310 & 33 & 820 & 12000 & 71\\
+%4 & 19 & 2 & 51 & 780 & 4\\
+%7 & 6 & 1 & 17 & 250 & 2\\
+%10 & 3 & 0 & 8 & 120 & 1\\
+%20 & 1 & 0 & 2 & 31 & 0
+1 & 310 & 33 & 820 & 1900 & 71\\
+4 & 19 & 2 & 51 & 120 & 4\\
+7 & 6 & 1 & 17 & 39 & 2\\
+10 & 3 & 0 & 8 & 19 & 1\\
+20 & 1 & 0 & 2 & 5 & 0
+\enddata
+\end{deluxetable}
+
+
+% LocalWords:  lccc 25ex TPCs lahabeacom2014 Antineutrino Jiangmen t20150112
+% LocalWords:  cccccc 0pc

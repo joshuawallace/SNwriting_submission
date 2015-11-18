@@ -1,0 +1,63 @@
+In a neutrino detector, for a given neutrino detection channel, the
+expected number of detected neutrinos $N_{det}$ as a function of time is given by
+\beq
+\label{eq:Nint}
+N_{det}(t) =  \frac{N_t}{4\pi D^2} \int \frac{dL_\nu(E_\nu,t)}{dE_\nu}\frac{1}{E_\nu}\sigma(E_\nu)\epsilon(E_e)dE_\nu,
+\eeq
+where $N_t$ is the number of target particles inside the
+detector, $dL_\nu/dE_\nu$
+is the energy luminosity spectrum of neutrinos, $E_\nu$ is the
+neutrino energy, $E_e$ is the energy of the final-state electron, 
+$D$ is the distance between the detector and the supernova, 
+$\sigma$ is the interaction cross section, and $\epsilon$ is
+the efficiency of detection.
+
+In a detector, there is not a one-to-one mapping between the energy
+of an interacting neutrino and the detected energy of the products.
+To understand exactly what
+a signal will look like in a detector, we have to understand how the
+spectrum of the detectable products relates to the spectrum of the
+incident neutrinos.  The number of events produced in a specific
+channel with product $x$ with observed kinetic energy $E_x$
+is
+\begin{equation}
+%\frac{dN_y}{dE_y} = \frac{N_t}{4\pi D^2} 
+%L_\nu(E_\nu) \frac{d\sigma (E_y\prime,E_\nu)}{dE_y\prime}
+\frac{dN_x}{dE_x dE_\nu dt} = \frac{N_t}{4\pi D^2} 
+\frac{dL_\nu(t,E_\nu)}{dE_\nu}\frac{1}{E_\nu} \frac{d\sigma
+(E_{x}',E_\nu)}{dE_{x}'}, %\delta(t-t'),
+\end{equation}
+where $E_\nu$ is the energy of the interacting neutrino, $E_x'$ is
+the energy of the product (usually an electron or positron),
+and $t$ is the detector time (with light
+travel time $D/c$ subtracted).  
+
+Neutrino oscillations that occur due to the MSW effect 
+in the envelope
+of a star will likely alter the measured \nue\ signal from the
+breakout burst.  There are two main realms of flavor conversions to be
+considered in the \nue\ breakout burst, connected with the two
+potential neutrino mass hierarchies: the normal hierarchy (NH), 
+where the $\nu_3$ mass
+eigenstate is of larger mass than either of $\nu_1$ or $\nu_2$; and
+the inverted hierarchy (IH), where the $\nu_3$ mass
+eigenstate is of smaller mass than either of $\nu_1$ or $\nu_2$. In
+the case of the NH, the observed luminosity of a neutrino species
+$L^{obs}_{\nu_i}$ is (\citealt{mirizzietal2015}):
+\begin{align}
+L^{obs}_{\nu_e} &= L_{\nu_{\mu,\tau}}, \\
+L^{obs}_{\bar \nu_e} &= \cos^2{\theta_{12}}L_{\bar \nu_e}
++ \sin^2{\theta_{12}}L_{\bar \nu_{\mu,\tau}},
+\end{align}
+where $\theta_{12}$ is the 1,2 mixing angle.  We use
+$\sin^2{\theta_{12}} = 0.308$ in this work (\citealt{oliveetal2014}).
+In the case of the IH, the observed luminosity of a neutrino species
+is (\citealt{mirizzietal2015})
+\begin{align}
+L^{obs}_{\nu_e} &= \sin^2{\theta_{12}}L_{\nu_e}
++ \cos^2{\theta_{12}}L_{\nu_{\mu,\tau}}, \\
+L^{obs}_{\bar \nu_e} &= L_{\bar \nu_{\mu,\tau}}. \label{eq:anue_ih}
+\end{align}
+
+
+% LocalWords:  det

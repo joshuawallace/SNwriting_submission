@@ -1,0 +1,145 @@
+%\documentclass[12pt,preprint]{aastex}
+\documentclass[iop,apj,appendixfloats]{emulateapj}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{afterpage}
+
+\usepackage{chngcntr}
+
+%%%%%%%%%%%%%%%%%%%% Definitions
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+
+%%\def\wid{width=\linewidth}
+\def\Msol{M\ensuremath{_{\odot}}}
+
+\def\abt{$\sim$}
+
+\def\shen{Shen EOS}
+\def\ls{LSEOS}
+
+\def\background{$\bar\nu_e + \nu_x$ background}
+\def\backgrounds{$\bar\nu_e + \nu_x$ backgrounds}
+
+
+\def\cer{\v{C}erenkov}
+
+\def\lmax{$L^n_{\nu_e,\mathrm{max}}$}
+\def\tmax{$t_{\mathrm{max}}$}
+\def\trise{$t_{\mathrm{rise},1/2}$}
+\def\tfall{$t_{\mathrm{fall},1/2}$}
+
+
+\def\ar40{$^{40}$Ar}
+\def\nue{$\nu_e$}
+\def\anue{$\bar\nu_e$}
+\def\nux{$\nu_x$}
+\def\nuxpart{$\nu_{\mu,\tau}$}
+\def\nuxanti{$\bar\nu_{\mu,\tau}$}
+
+\def\prd{Phys. Rev. D} 
+
+\def\jcap{J. Cosmology Astropart. Phys.}
+                % Journal of Cosmology and Astroparticle Physics
+
+
+
+
+\begin{document}
+
+\title{Detecting the Supernova Breakout Burst in 
+Terrestrial Neutrino Detectors}
+
+\author{Joshua Wallace\footnote{joshuajw@astro.princeton.edu}, Adam Burrows}
+%\email{joshuajw@astro.princeton.edu}
+\affil{Department of Astrophysical Sciences, Princeton
+  University, Princeton, NJ 08544, USA}
+
+\and
+
+\author{Joshua C. Dolence}
+\affil{Computational Physics Group (CCS-2), MS-K784, Los
+  Alamos National Laboratory, P.O. Box 1663, Los Alamos, NM 87545,
+  USA}
+
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+\keywords{supernovae: general ---  neutrinos}
+
+\section{Introduction}
+\input{intro.tex}
+
+\section{The Supernova Models}
+\label{sec:model}
+\input{models.tex}
+
+
+\section{Signal Evolution}
+\label{sec:signalevolution}
+\input{signals.tex}
+
+\section{Terrestrial Neutrino Detectors}
+\label{sec:detection}
+\input{detection.tex}
+
+
+\section{Method}
+\label{sec:method}
+\input{method.tex}
+
+\section{Results}
+\label{sec:discussion}
+\input{results.tex}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\input{conclusion.tex}
+
+\acknowledgments
+
+We thank Kate Scholberg, Andr\'e Rubbia, Masayuki Nakahata, and 
+Lutz K\"opke
+for useful conversations.
+We also thank Gabriel Martinez-Pinedo for providing us with tables
+for the \ar40\ cross sections.
+The authors acknowledge support provided by the NSF PetaApps 
+program, under award OCI-0905046 via a subaward no. 44592 from 
+Louisiana State University to Princeton University, and by the 
+Max-Planck/Princeton Center (MPPC) for Plasma Physics 
+(NSF PHY-1144374). The authors employed computational resources 
+provided by the TIGRESS high performance computer center at 
+Princeton University, which is jointly supported by the Princeton 
+Institute for Computational Science and Engineering (PICSciE) and 
+the Princeton University Office of Information Technology and by 
+the National Energy Research Scientific Computing Center (NERSC), 
+which is supported by the Office of Science of the US Department 
+of Energy under contract DE-AC03-76SF00098. This work is part of 
+the ``Three Dimensional Modeling of Core-Collapse Supernovae" PRAC 
+allocation support by the National Science Foundation (award number 
+ACI-1440032). In addition, this research is part of the Blue Waters 
+sustained-petascale computing project, which is supported by the 
+National Science Foundation (awards OCI-0725070 and ACI-1238993) 
+and the state of Illinois. Blue Waters is a joint effort of the 
+University of Illinois at Urbana-Champaign and its National Center 
+for Supercomputing Applications.
+
+
+\bibliographystyle{apj}
+\bibliography{bibliography}
+
+\begin{appendix}
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\theequation}{A\arabic{equation}}
+\input{cs.tex}
+\end{appendix}
+
+\input{figures.tex}
+
+\end{document}
