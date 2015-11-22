@@ -28,7 +28,7 @@ maximum performance level of the detectors in our analysis in terms of
 maximizing the \nue\ signal and minimizing \backgrounds.
 
 IceCube's 540 Hz average background rate per detection component, when 
-    multiplied by the total number of detection components (5160) gives a total 
+    multiplied by the total number of detection components (5160), gives a total 
     background rate of 2786 ms$^{-1}$.  Assuming Poissonian noise, the fluctuations
     on this rate are $\sqrt{2786} = 53$ ms$^{-1}$.  As can be seen from Table~\ref{tab:numdetections}, the 
     expected $\nu_e$ detection rate through the breakout burst peak for a CCSN at 
@@ -167,8 +167,8 @@ likely to make an accurate measurement in the no-oscillation, with the accuracy 
 Hyper-K and DUNE being greater, owing to their larger detection
 volumes and (for DUNE) larger detection cross sections. 
 
-\begin{deluxetable*}{ccccc}
-%\begin{deluxetable}{cccccc}
+%\begin{deluxetable*}{ccccc}
+\begin{deluxetable}{cccccc}
 \tablewidth{0pc}
 \tablecolumns{6}
 \tablecaption{Most Likely Value and Percent Error for Measuring
@@ -203,8 +203,8 @@ $L^n_{\nu_e,\mathrm{max}}$,
 26.7  & ... & 2.0$^{+109\%}_{-36\%}$ & ... & ...\\
 30  & ... & ... & ... & ...
 \enddata
-\end{deluxetable*}
-%\end{deluxetable}
+%\end{deluxetable*}
+\end{deluxetable}
 
 
 Table~\ref{tab:numpeakfit_realparm} shows that, 
@@ -535,25 +535,50 @@ channels in the detectors under consideration here.  Because of this,
 a clear detection of the \nue\ breakout burst is more difficult
 in the NH case than in the no-oscillation case.
 
+%For Gd-doped water-\cer\ and scintillation detectors, IBD interactions
+%can be tagged.  Additionally, NC scatterings off of oxygen or
+%carbon nuclei can be tagged as well, because of the emission of
+%photons from the deexcitation of the nucleus.  
+%For these proton-rich detectors, subtracting the 
+%IBD interactions in the NH case will subtract much of the \background\ without
+%subtracting any 
+%\nue\ signal.  Subtracting NC scatterings off of oxygen or carbon
+%nuclei will subtract some \nue's from the signal but, since these
+%interactions have relatively large thresholds (\abt 15-20 MeV), it is
+%the \nux's with higher average energy than \nue's 
+%that are primarily subtracted and thus
+%such a subtraction improves the detectability of the \nue\ breakout signal
+%overall.  This helps beat down the \backgrounds.
+
 For Gd-doped water-\cer\ and scintillation detectors, IBD interactions
-can be tagged.  Additionally, NC scatterings off of oxygen or
-carbon nuclei can be tagged as well, because of the emission of
-photons from the deexcitation of the nucleus.  
-For these proton-rich detectors, subtracting the 
-IBD interactions in the NH case will subtract much of the \background\ without
-subtracting any 
-\nue\ signal.  Subtracting NC scatterings off of oxygen or carbon
-nuclei will subtract some \nue's from the signal but, since these
-interactions have relatively large thresholds (\abt 15-20 MeV), it is
-the \nux's with higher average energy than \nue's 
-that are primarily subtracted and thus
-such a subtraction improves the detectability of the \nue\ breakout signal
-overall.  This helps beat down the \backgrounds.
-Figure~\ref{fig:hyperk_superk_juno_nh_backgrounds}
-shows, in the NH case, the expected count rate in Hyper-K, Super-K, and JUNO 
+    can be tagged with high efficiency.  Scintillation detectors can
+    tag IBD's with \abt 99\% 
+    efficiency, while water-Cherenkov detectors can tag IBD's with
+    \abt 90\% efficiency.  The 
+    remaining, untagged IBD's can be statistically subtracted using the measured rate of 
+    the tagged IBD's.  Additionally, NC scatterings off of oxygen or carbon nuclei can be 
+    tagged as well, because of the emission of photons from the de-excitation of the nucleus.  
+    For these proton-rich detectors, subtracting the IBD interactions in the NH case will 
+    subtract much of the \background\ without subtracting any \nue\ 
+    signal.  Subtracting NC scatterings off of oxygen or carbon nuclei will subtract some 
+    \nue's from the signal but, since these interactions have relatively large thresholds  
+    (~15-20 MeV), it is the \nux's with higher average energy than \nue's that are 
+    primarily subtracted and thus such a subtraction improves the detectability of the \nue\ 
+    breakout signal overall.  This helps beat down the \backgrounds.  In 
+    the case of the \abt 90\% IBD tagging efficiency for water-Cherenkov detectors, the 
+    statistical subtraction of the \abt 10\% of IBD's that are not tagged would introduce 
+    additional statistical errors.  However, these errors are modest relative to the signal 
+    extracted and so for simplicity we assume the ability to tag all of the IBD events, as well 
+    as all of the NC scatterings off of oxygen and carbon.
+Figure~\ref{fig:hyperk_superk_nh_backgrounds}
+shows, in the NH case, the expected count rate in Hyper-K and Super-K 
 for a supernova at 4, 7, and
 10 kpc and for all neutrinos types, with
-neutrinos detected via IBD's and oxygen/carbon NC scattering events subtracted.
+neutrinos detected via IBD's and oxygen NC scattering events
+subtracted.
+Figure~\ref{fig:juno_dune_nh_backgrounds} shows the same for JUNO and
+DUNE, except that DUNE has no neutrino signal subtracted and JUNO has
+neutrinos detected via IBD's and carbon NC scattering events subtracted.
 For Hyper-K in the NH case, the peak of the \nue\ breakout burst 
 would not be detectable at 4, 7, or 10 kpc (based on the
 size of the error bars relative to the difference in values in each
@@ -566,18 +591,18 @@ breakout burst in the NH case.  The
 pre-shock neutronization peak in the NH case is unlikely to be 
 discernible due to the expected noise.  
 
-Based on Figure~\ref{fig:hyperk_superk_juno_nh_backgrounds}, the peak
+Based on Figures~\ref{fig:hyperk_superk_nh_backgrounds} and \ref{fig:juno_dune_nh_backgrounds}, the peak
 will not be discernible in the NH case for either Super-K or JUNO at
 any of the distances in that figure (4, 7, and 10 kpc).  The
 pre-shock neutronization peak is also unable to be discernible in the
 NH due to the expected noise.
 
-Long-string detectors, unlike scintillation or Gd-doped water-\cer\
-detectors, are
-unable to make any discriminations between neutrinos.  Because of
-this, in the NH case, 
-detection of the \nue\ breakout burst peak is currently impossible for such
-detectors, even for nearby supernovae.
+%Long-string detectors, unlike scintillation or Gd-doped water-\cer\
+%detectors, are
+%unable to make any discriminations between neutrinos.  Because of
+%this, in the NH case, 
+%detection of the \nue\ breakout burst peak is currently impossible for such
+%detectors, even for nearby supernovae.
 
 
 %Figure~\ref{fig:icecube_dune_nh_backgrounds} shows the expected count rate
@@ -598,7 +623,7 @@ scattering.  Since, for the NH, all the original \nue\ flux becomes
 \nuxpart's, the signal in \ar40\ detectors is dominated by the \nuxpart's that
 have become \nue's.  The signal of the original \nue\ flux is lost to
 this dominating \nuxpart\ background.  This can be seen in
-Figure~\ref{fig:icecube_dune_nh_backgrounds}, which shows, in the NH
+Figure~\ref{fig:juno_dune_nh_backgrounds}, which shows, in the NH
 case, the expected count rate
 in DUNE for all neutrino types and 
 for supernovae at distances of 4, 7, and 10 kpc.  
@@ -614,13 +639,17 @@ Gd-doped water-\cer\ and scintillation detectors (in which signals from
 IBD's and oxygen/carbon NC scatterings can be subtracted), a clear peak
 should be discernible in an appropriately close supernova (with
 ``appropriately close'' depending on the size of the detector).  
-Figure~\ref{fig:hyperk_superk_juno_ih_backgrounds}
-shows, in the IH case, the expected count rate in Hyper-K, Super-K, and JUNO 
+Figure~\ref{fig:hyperk_superk_ih_backgrounds}
+shows, in the IH case, the expected count rate in Hyper-K and Super-K 
 for all neutrinos types, with
-backgrounds from IBD's and oxygen/carbon NC scattering events subtracted, for
-supernovae at distances of 4, 7, and 10 kpc.  For all three detectors, a
+backgrounds from IBD's and oxygen NC scattering events subtracted, for
+supernovae at distances of 4, 7, and 10 kpc.  
+Figure~\ref{fig:juno_dune_ih_backgrounds} shows the same for JUNO and
+DUNE, except that DUNE has no neutrino signal subtracted and JUNO has
+neutrinos detected via IBD's and carbon NC scattering events subtracted.
+For all four detectors, a
 cleaner peak is seen in the IH case than in the NH case (NH case shown
-in Figure~\ref{fig:hyperk_superk_juno_nh_backgrounds}).  For Hyper-K, 
+in Figures~\ref{fig:hyperk_superk_nh_backgrounds} and~\ref{fig:juno_dune_nh_backgrounds}).  For Hyper-K, 
 a clear detection of
 the \nue\ breakout burst peak in the IH case 
 should be possible at 4 kpc, is
@@ -630,7 +659,7 @@ Hyper-K at
 any of these distances in the IH case.
 
 For Super-K and JUNO,
-Figure~\ref{fig:hyperk_superk_juno_ih_backgrounds} shows that
+Figures~\ref{fig:hyperk_superk_ih_backgrounds} and~\ref{fig:juno_dune_ih_backgrounds} show that
 the \nue\ peak may be discernible in the IH case for a supernova at 4
 kpc, but not likely to be discernible at 7 or 10 kpc.  The pre-shock
 neutronization peak is not discernible at any of these
@@ -659,7 +688,7 @@ the cross section for \nue\ absorption on \ar40\ is so large relative to
 the other cross sections considered in this work, the partial
 maintenance of the original \nue\ flux makes a big difference in
 the detectability of the \nue\ signal in these detectors.  
-Figure~\ref{fig:icecube_dune_ih_backgrounds}
+Figure~\ref{fig:juno_dune_ih_backgrounds}
 shows, in the IH case, the expected count rate in DUNE 
 for all neutrinos types, for
 supernovae at distances of 4, 7, and 10 kpc.  In the IH case, 
