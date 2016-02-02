@@ -21,9 +21,9 @@ larger than that used for our subsequent analysis, so that the total
 number of neutrinos actually used in the analysis is allowed to
 fluctuate randomly, instead of being set by our calculated total expected
 number of neutrino interactions.   A collection of $5\times10^4$ 
-sample observations are thus assembled for each detector and supernova
+sample observations are thus assembled for each detector and SN
 distance.  The simulated data
-are binned in time (in time bins of 1-ms width) 
+are binned in time (in time bins of 1 ms width), 
 and standard deviations for each time bin are
 calculated using the values across the $5\times10^4$ different
 simulated observations.
@@ -43,7 +43,7 @@ in each time bin, our assumption is not valid, but we hold to it both
 for simplicity and also because the sparse data expected with smaller
 detectors and at larger distances will themselves create large errors in the
 distribution of fits to our simulated observations, larger than those
-which could be corrected by providing asymmetric errors in each time bin.
+that could be corrected by providing asymmetric errors in each time bin.
 
 As a specific example of a calculation, 
 Figure~\ref{fig:hyperkhistogram} shows the results of one of the $5\times10^4$
@@ -57,7 +57,7 @@ then fit to the resultant number luminosity histograms (with error bars)
 using the \texttt{curve\_fit()} function
 of SciPy.  
 \texttt{curve\_fit()} implements
-the Levenberg-Marquardt algorithm to fit data to a function with arbitrary
+the Levenberg--Marquardt algorithm to fit data to a function with arbitrary
 parameters.  The function we fit is derived from 
 Equation~(\ref{eq:Nint}), as follows.  First, the energy luminosity spectrum is
 converted to number luminosity spectrum, $dL^{n}_{\nu}/dE_\nu$,
@@ -82,7 +82,7 @@ we can rearrange Equation~(\ref{eq:numlumnorm}) to get
 Equation~(\ref{eq:Nint}) to obtain
 \begin{equation}
 \label{eq:blackbox}
-N_{det}(t) =  \frac{N_{t}}{4\pi D^2}
+N_{\textrm{det}}(t) =  \frac{N_{t}}{4\pi D^2}
 L^n_\nu(t,\boldsymbol{p})
 \int 
 \frac{dL^{n \prime}_{\nu}}{dE_{\nu}}\sigma(E_\nu)\epsilon(E_e)dE_\nu,
@@ -91,18 +91,18 @@ where $L^n_\nu$ is given by
 Equation~(\ref{eq:analytic}), the superscript $n$
 specifies the use of number luminosity instead of energy luminosity, 
 $\boldsymbol{p}$ represents the parameter values being used in 
-Equation~(\ref{eq:analytic}) or~(\ref{eq:smallpeak}), $dN'/dE_\nu$ is the
+Equation~(\ref{eq:analytic}) or Equation~(\ref{eq:smallpeak}), $dN'/dE_\nu$ is the
 normalized number spectrum, and the other symbols have the same
 meanings as in Equation~(\ref{eq:Nint}). To use
-Equation~\ref{eq:blackbox}, the distance to the supernova must be
-known.  If the supernova is visible, an independent measurement of $D$
-can be made.  If the supernova is obscured, the distance will likely
+Equation~\ref{eq:blackbox}, the distance to the SN must be
+known.  If the SN is visible, an independent measurement of $D$
+can be made.  If the SN is obscured, the distance will likely
 have to be estimated from the neutrino signal.  In our analysis, we
 assume knowledge of the distance. In this analysis, we have the
 advantage of knowing the energy spectrum from our models, and that is
-the spectrum which is used in Equation~\ref{eq:blackbox} for our
+the spectrum that is used in Equation~\ref{eq:blackbox} for our
 analysis.  An actual detection might entail the measurement of the
-energy spectrum of the neutrinos, and will likely have an additional
+energy spectrum of the neutrinos and will likely have an additional
 function and parameterization that will be used to fit the spectrum.
 We do not perform such a full analysis in this work, but in principle
 it would be straightforward. Figures~\ref{fig:energyspectrum}
@@ -122,16 +122,16 @@ the \texttt{curve\_fit()} function to fit the simulated data is
 Equation~(\ref{eq:blackbox}), while the parameters that are being used
 in the fitting algorithm are those of the intrinsic number
 luminosity. 
-The Levenberg-Marquardt algorithm requires an initial guess for the
+The Levenberg--Marquardt algorithm requires an initial guess for the
 parameters, for which we provide the values from
 Table~\ref{tab:numpeakfit}.
 
-After the best fit fitting parameters are calculated, the physical
+After the best-fit fitting parameters are calculated, the physical
 parameters are derived from the fit.  
-We emphasize again that it is not the fitting parameters, but rather the
+We emphasize again that it is not the fitting parameters but rather the
 physical parameters that are important to
 our analysis.  For the main breakout burst peak, the physical parameters
-calculated are:
+calculated are the
  maximum number luminosity of breakout burst
 ($L^n_{\nu_e,\mathrm{max}}$),
 the time of maximum luminosity ($t_{\mathrm{max}}$), the width of the

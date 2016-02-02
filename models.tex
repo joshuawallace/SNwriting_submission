@@ -1,27 +1,27 @@
 
-The models used in this study were produced using F{\sc{ornax}} (Dolence 
-\& Burrows 2015, in preparation).
+The models used in this study were produced using F{\sc{ornax}} (J. Dolence 
+\& A. Burrows 2015, in preparation).
 F{\sc{ornax}} is a code written in generally covariant form for 
 multidimensional,
 self-gravitating, radiation hydrodynamics that is second-order accurate in
 space and time and was designed from scratch with the CCSN 
 problem in mind. The code solves the equations of compressible
-hydrodynamics with an arbitrary equation of state, coupled to the
+hydrodynamics with an arbitrary equation of state (EOS), coupled to the
 multigroup two-moment equations for neutrino transport. The hydrodynamics
-in F{\sc{ornax}} is based on a directionally-unsplit Godunov-type finite-volume
+in F{\sc{ornax}} is based on a directionally unsplit Godunov-type finite-volume
 method. Fluxes at cell faces are computed with the fast and accurate HLLC
 approximate Riemann solver, with left and right states given by limited
 parabolic reconstructions of the underlying volume-averaged states. The
 multigroup two-moment equations for neutrino transport are formulated in
-the comoving frame and include all terms to $\mathcal{O}$(v/c). 
+the comoving frame and include all terms to $\mathcal{O}$($v/c$). 
 The moment hierarchy
 is closed with the ``M1" model. F{\sc{ornax}} adopts a Godunov-type approach for
 treating the transport-related divergence terms that requires that we
 solve a generalized Riemann problem at each face. All of the these
-transport related terms are treated explicitly in time. After core bounce,
+transport-related terms are treated explicitly in time. After core bounce,
 the fastest hydrodynamic signal speeds in the CCSN 
 problem are within a factor of a few of the speed of light, so explicit
-time integration is not only simpler and generally more accurate, it is
+time integration is not only simpler and generally more accurate but it is
 also faster than globally coupled time implicit transport solves that are
 typically employed in radiation hydrodynamics. The source and sink terms
 that transfer energy between the radiation and the gas are operator-split
@@ -30,10 +30,10 @@ not introduce any global coupling.
 
  Progenitors with mass of 12, 15, 20, and
 25 \Msol\ from \cite{woosleyheger2007} 
-were simulated in 1D with the Lattimer-Swesty high-density
-nuclear equation of state with $K=220$ MeV (\ls;
+were simulated in 1D with the Lattimer--Swesty high-density
+nuclear EOS with $K=220$ MeV (\ls;
 \citealt{lattimerswesty1991}), while a progenitor with mass 15
-\Msol\ was simulated using the Shen nuclear equation of state (\shen;
+\Msol\ was simulated using the Shen nuclear EOS (\shen;
 \citealp{shenetaljul1998,shenetalnov1998}).  This set of models is
 chosen to give a good span of potential progenitors for an actual
 CCSN. 
@@ -48,11 +48,11 @@ $L_{\nu_i}$ representing the $\nu_i$ energy luminosity. In this work,
 we use \nuxpart\ to refer to $\nu_\mu$ and $\nu_\tau$ and use \nuxanti\
 to refer to $\bar\nu_\mu$ and $\bar\nu_\tau$.
 Additionally, $L_{\nu_x}$ refers to the luminosity due to all of
-the \nux's together, while  $L_{\nu_{\mu,\tau}}$ and
-$L_{\bar\nu_{\mu,\tau}}$ refer to the luminosity due to just
+the \nux's together, while  $L_{\nu_{\mu,\nobreak \tau}}$ and
+$L_{\bar\nu_{\mu,\nobreak \tau}}$ refer to the luminosity due to just
 one of their constituent species.
 The initial peak in \nue\ luminosity
-from the pre-shock neutronization of the core is evident, followed
+from the preshock neutronization of the core is evident, followed
 by the much steeper rise and
 larger peak in \nue\ luminosity due to the breakout burst. After the 
 breakout burst, the \anue\ and
@@ -64,7 +64,7 @@ to the \nue\ signal we want to detect.
 Figure~\ref{fig:nuelumt} shows the unoscillated-\nue\ number luminosity as a function of
 time during breakout for the various models. The light curves are
 centered around their maximum values. The \shen\ model has the largest
-peak luminosity
+peak luminosity,
 while the \ls\ models are grouped together at a slightly lower peak
 luminosity. 
 Results from \cite{sullivanetal2015} suggest that the higher peak 
@@ -77,7 +77,7 @@ also affect the stimulated absorption correction of electron capture.
 This tight grouping of peak luminosities for all progenitors, 
 if in fact real,
 can be used as a standard candle to determine the distance to a
-supernova.  \cite{kachelriessetal2005} suggest that a supernova at 10 kpc
+supernova (SN).  \cite{kachelriessetal2005} suggest that an SN at 10 kpc
 could have its distance determined to a precision of \abt 5\%, if these
 theoretical predictions play out.
 
@@ -92,25 +92,25 @@ the maximum number
 luminosity of breakout burst
 ($L^n_{\nu_e,\mathrm{max}}$),
 the time of maximum luminosity ($t_{\mathrm{max}}$), the width of the
-breakout burst peak ($w$, calculated using the full width at half-maximum), 
+breakout burst peak ($w$, calculated using the FWHM), 
 the rise time ($t_{\mathrm{rise},1/2}$, calculated
 using the width left of peak at half-maximum), and the fall time
 ($t_{\mathrm{fall},1/2}$, calculated using
-the width right of peak at half-maximum).  For the pre-shock
+the width right of peak at half-maximum).  For the preshock
 neutronization peak we define the following physical parameters: the
-maximum number luminosity of the pre-shock peak
+maximum number luminosity of the preshock peak
 ($L^n_{\nu_e,\mathrm{max,pre}}$) and the time of this maximum luminosity 
 ($t_{\mathrm{max,pre}}$).
 Table~\ref{tab:numpeakfit_realparm} shows the values the physical
 parameters of the breakout burst take in our  number luminosity light
 curves, and Table~\ref{tab:smallbumpphysicalparms} shows the values
-the physical parameters of the pre-shock neutronization peak take in
+the physical parameters of the preshock neutronization peak take in
 the same curves.
 The fact that  $t_{\mathrm{max}}=0$ for all models is to be
 expected, since the zero point in time for all the models is defined
 to be the time of maximum luminosity.
-%\begin{deluxetable}{lccccc}
-\begin{deluxetable*}{lccccc}
+\begin{deluxetable}{lccccc}
+%\begin{deluxetable*}{lccccc}
 \tablewidth{\linewidth}
 \tablecolumns{7}
 \tablecaption{Physical Parameters of the Breakout Peak Fit to the Number Luminosity, L$^n_{\nu_e}$\label{tab:numpeakfit_realparm}}
@@ -130,13 +130,13 @@ to be the time of maximum luminosity.
 20 & 2.03 & 0.00 & 10.2 & 2.22 & 7.96 \\%& 0.597 & -6.43\\
 25 & 2.02 & 0.00 & 10.4 & 2.28 & 8.10 %& 0.604 & -6.48
 \enddata
-\end{deluxetable*}
-%\end{deluxetable}
+%\end{deluxetable*}
+\end{deluxetable}
 %
 \begin{deluxetable}{lcc}
 \tablewidth{0pc}
 \tablecolumns{5}
-\tablecaption{Physical Parameters of the Pre-Shock Neutronization Peak Fit to the Number Luminosity, L$^n_{\nu_e}$\label{tab:smallbumpphysicalparms}}
+\tablecaption{Physical Parameters of the Preshock Neutronization Peak Fit to the Number Luminosity, L$^n_{\nu_e}$\label{tab:smallbumpphysicalparms}}
 \tablehead{
 \colhead{Model} & \multicolumn{1}{c}{$L^n_{\nu_e,\mathrm{max,pre}}$} & \colhead{$t_{\mathrm{max,pre}}$} \\
   \colhead{(\Msol)} & \colhead{(10$^{58}$ s$^{-1}$)} &\colhead{(ms)} }
@@ -158,7 +158,7 @@ breakout burst.  The function we use to
 fit the main peak is
 \begin{equation}
 \label{eq:analytic}
-L(t) = \frac{A}{((t-t_{c})/[\textrm{ms}])^\alpha} \exp\left[ -\left(\frac{b}{t-t_{c}}\right)^\beta\right] + L_{base},
+L(t) = \frac{A}{((t-t_{c})/[\textrm{ms}])^\alpha} \exp\left[ -\left(\frac{b}{t-t_{c}}\right)^\beta\right] + L_{\textrm{base}},
 \end{equation}
 where $A$ is a scaling parameter with units of (for energy luminosity) erg
 s$^{-1}$ or (for number luminosity) s$^{-1}$, $b$ is a
@@ -168,16 +168,16 @@ is a number used to center the fit appropriately,
 $\alpha$ and
 $\beta$ are exponents similar to those used in
 \cite{burrowsmazurek1983}, 
-and $L_{base}$ (in units erg s$^{-1}$ for energy luminosity, or s$^{-1}$ for
+and $L_{\textrm{base}}$ (in units of erg s$^{-1}$ for energy luminosity or s$^{-1}$ for
 number luminosity) is used to set the floor of the fit.  Since the
 intent of Equation~(\ref{eq:analytic}) is to provide a fit to our models
 for subsequent analysis, we do not spend much time in this work 
 examining its physical significance. We refer readers to
 \cite{burrowsmazurek1983} for a motivation of its functional form.  
-We do note that the floor set by $L_{base}$ can be thought of as 
+We do note that the floor set by $L_{\textrm{base}}$ can be thought of as 
 the level 
 to which the \nue\ luminosity decays as the luminosity source
-transitions from the electron capture which dominates the breakout
+transitions from the electron capture that dominates the breakout
 burst to the accretion, deleptonization, and cooling phases of the proto-neutron star. 
 
 
@@ -189,7 +189,7 @@ burst to the accretion, deleptonization, and cooling phases of the proto-neutron
 \tablehead{
 \colhead{Model} & \multicolumn{1}{c}{$A$} & \colhead{$b$}
 & \colhead{$t_c$} & \colhead{$\alpha$}
-& \colhead{$\beta$} & \colhead{$L_{base}$} \\ 
+& \colhead{$\beta$} & \colhead{$L_{\textrm{base}}$} \\ 
 \colhead{(\Msol)} &  \colhead{$(10^{57} $ erg s$^{-1})$} &
 \colhead{(ms)} &  \colhead{(ms)}
 &  \colhead{} &  \colhead{}
@@ -223,11 +223,11 @@ which equates to (for energy luminosity) $10^{71}$ erg s$^{-1}$ and
 (for number luminosity) $10^{71}$ s$^{-1}$.  The choice of this
 particular maximum value is arbitrary.  It is based on our experience
 with the behavior of the fits with unbounded parameters.  Since the fits are so
-good, and since we care about the physical parameters which
+good, and since we care about the physical parameters that 
 are derived from the fits rather than the fit parameters themselves, 
 we see no harm in doing this.  Additionally, we 
 force $\alpha$, $\beta$,
-$L_{base}$, and $A$ to be positive.  We wish to emphasize that
+$L_{\textrm{base}}$, and $A$ to be positive.  We wish to emphasize that
 although the parameters of Table~\ref{tab:peakfit} vary to a 
 large degree between models, the important consideration in our analysis is
 not the parameters themselves, but the characteristics of the fit they
@@ -236,7 +236,7 @@ shown in Table~\ref{tab:numpeakfit_realparm}), so the
 fidelity of the fits in representing the numerical models is far more
 important than the values the fit parameters
 take. A reason for the large variation in the 
-best fit values of
+best-fit values of
 $A$ and $b$ is the very large, positive covariance between these two
 parameters.  Since the specific values of these parameters are not
 important, we do not focus on the covariance
@@ -265,8 +265,8 @@ data in this work.
 
 
 
-Additionally, we fit the pre-shock neutronization peak with a
-modified log-normal curve,
+Additionally, we fit the preshock neutronization peak with a
+modified lognormal curve,
 \begin{equation}
 \label{eq:smallpeak}
 L(t) =
@@ -275,19 +275,19 @@ C \exp\left(\frac{-(\ln(t' -\theta)-\mu)^2}
 \end{equation}
 where $t'=-t/$[ms], $C$ is a scaling factor, and all the other
 parameters have their
-usual meaning in relation to the log-normal distribution: $\sigma$ is
+usual meaning in relation to the lognormal distribution: $\sigma$ is
 the standard deviation, $\theta$ is the location parameter, and $\mu$
-is the median of the distribution.  The best fit values to the
-pre-shock  energy
+is the median of the distribution.  The best-fit values to the
+preshock  energy
 luminosity for the various models are shown in
 Table~\ref{tab:smallbumpfit}, and  Table~\ref{tab:numsmallbumpfit} shows the
-best fit values for the pre-shock 
+best-fit values for the preshock 
 number luminosity. Figure~\ref{fig:fit}
 displays the fits of
 Equation~(\ref{eq:smallpeak}) to our numerical models. 
 The physical parameters we define for the 
-pre-shock neutronization peak are (as introduced previously) the
-maximum number luminosity of the pre-shock peak
+preshock neutronization peak are (as introduced previously) the
+maximum number luminosity of the preshock peak
 ($L^n_{\nu_e,\mathrm{max,pre}}$) and the time of this maximum luminosity 
 ($t_{\mathrm{max,pre}}$).  The model values of these parameters are
 shown in Table~\ref{tab:smallbumpphysicalparms}. It is the fits
@@ -303,7 +303,7 @@ and after the breakout burst).
 \begin{deluxetable}{lcccc}
 \tablewidth{0pc}
 \tablecolumns{5}
-\tablecaption{Pre-Shock Neutronization Peak Fit to the Energy Luminosity, L$_{\nu_e}$\label{tab:smallbumpfit}}
+\tablecaption{Preshock Neutronization Peak Fit to the Energy Luminosity, L$_{\nu_e}$\label{tab:smallbumpfit}}
 \tablehead{
 \colhead{Model} & \multicolumn{1}{c}{$C$} & \colhead{$\sigma$}
 & \colhead{$\theta$} & \colhead{$\mu$} \\
@@ -321,7 +321,7 @@ and after the breakout burst).
 \begin{deluxetable}{lcccc}
 \tablewidth{0pc}
 \tablecolumns{5}
-\tablecaption{Pre-Shock Neutronization Peak Fit to the Number Luminosity, L$^n_{\nu_e}$\label{tab:numsmallbumpfit}}
+\tablecaption{Preshock Neutronization Peak Fit to the Number Luminosity, L$^n_{\nu_e}$\label{tab:numsmallbumpfit}}
 \tablehead{
 \colhead{Model} & \multicolumn{1}{c}{$C$} & \colhead{$\sigma$}
 & \colhead{$\theta$} & \colhead{$\mu$} \\
@@ -353,7 +353,7 @@ general behavior.
 $\overline{E}_{\nu_e}$ increases from the onset
 of the breakout burst, peaks near \tmax, and then
 decays slightly.  However, during the breakout, $\overline{E}_{\nu_e}$ 
-does not change radically, and is similar from model to
+does not change radically and is similar from model to
 model.
  There is a slight trend for the average \nue\ energy during
 breakout to be slightly higher for the lower-mass progenitors.  In
